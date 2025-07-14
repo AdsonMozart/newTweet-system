@@ -20,7 +20,8 @@ public class Tweet {
     @Column(name = "tweet_id")
     private Long tweetId;
 
-    @Column(length = 100)
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
     private String content;
